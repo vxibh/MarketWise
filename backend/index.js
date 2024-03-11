@@ -1,7 +1,8 @@
 const app = require('./app')
-const dotenv = require("dotenv");
+const { connectDatabase} = require("./database/db.js");
 
+connectDatabase();
 
 app.listen(process.env.PORT, () =>{
-    console.log(`the server is running at https://${process.env.hostname}:${process.env.PORT}`)
+    console.log(`the server is running at http://${process.env.hostname}:${process.env.PORT}`)
 });
