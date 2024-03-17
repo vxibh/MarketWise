@@ -1,7 +1,7 @@
-const User = require("../models/user.models.js");
+import User from "../models/user.models.js";
 
 // registering user
-exports.createUser = async (req,res) => {
+export const createUser = async (req,res) => {
     try {
         const {name,email,password,address,contact} = req.body;
 
@@ -31,7 +31,7 @@ exports.createUser = async (req,res) => {
 }
 
 // logining user
-exports.loginUser = async (req,res) => {
+export const loginUser = async (req,res) => {
     try {
         const { email,password } = req.body;
 
