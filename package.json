@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "this is a e-commerce website for se lab project",
   "main": "backend/index.js",
+  "type" : "module",
   "scripts": {
     "dev":"nodemon backend/index.js"
   },

@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //importing routes
-const authRouter = require("./routes/authUser.routes.js");
+import authRouter from "./routes/authUser.routes.js";
 //using routes
 app.use("/api/v1/user", authRouter);
 
