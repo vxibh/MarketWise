@@ -6,12 +6,12 @@ export const createUser = async (req,res) => {
         const {name,email,password,address,contact} = req.body;
 
         if( !name || !email || !password){
-            res.status(401).json({success: false,message:"please fill the required fields"});
+            return res.status(401).json({success: false,message:"please fill the required fields"});
         }
 
         let user = await User.findOne({name,email});
         if(user){
-            res.status(401).json({success: false,message: "user already exist"});
+            return res.status(401).json({success: false,message: "user already exist"});
         }
 
         // this is also a way of creating a new user 
